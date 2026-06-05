@@ -1,0 +1,44 @@
+{
+  "plugins": [
+    {
+      "id": "1",
+      "name": "Serum",
+      "developer": "Xfer Records",
+      "categoryId": "1",
+      "type": "VST3",
+      "rating": 5,
+      "notes": "Mein meistgenutzter Wavetable-Synth",
+      "isFavorite": true
+    },
+    {
+      "id": "2",
+      "name": "FabFilter Pro-Q 3",
+      "developer": "FabFilter",
+      "categoryId": "5",
+      "type": "VST3",
+      "rating": 5,
+      "notes": "Bester EQ überhaupt",
+      "isFavorite": true
+    },
+    {
+      "id": "3",
+      "name": "Valhalla Room",
+      "developer": "Valhalla DSP",
+      "categoryId": "3",
+      "type": "VST3",
+      "rating": 4,
+      "notes": "Sehr natürlicher Reverb",
+      "isFavorite": false
+    }
+  ],
+  "categories": [
+    { "id": "1", "name": "Synth", "description": "Synthesizer Plugins" },
+    { "id": "2", "name": "Sampler", "description": "Sample-basierte Instrumente" },
+    { "id": "3", "name": "Reverb", "description": "Raumklang-Effekte" },
+    { "id": "4", "name": "Delay", "description": "Delay und Echo Effekte" },
+    { "id": "5", "name": "EQ", "description": "Equalizer Plugins" },
+    { "id": "6", "name": "Compressor", "description": "Dynamik-Kompressoren" },
+    { "id": "7", "name": "Distortion", "description": "Verzerrungs-Effekte" },
+    { "id": "8", "name": "Utility", "description": "Hilfsplugins und Tools" }
+  ]
+}
