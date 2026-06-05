@@ -1,16 +1,96 @@
-# React + Vite
+# 🎛️ VST Plugin Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Eine Web-Applikation für Musikproduzenten zum Verwalten ihrer VST-Plugin-Sammlung.
+Plugins können erfasst, kategorisiert, bewertet und mit Notizen versehen werden.
 
-Currently, two official plugins are available:
+Gebaut mit **React**, **React Router** und **json-server**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Voraussetzungen
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Folgende Software muss installiert sein:
 
-## Expanding the ESLint configuration
+| Software | Version  | Download |
+|----------|----------|----------|
+| Node.js  | ≥ 18     | https://nodejs.org |
+| npm      | ≥ 9      | (enthalten in Node.js) |
+| Git      | aktuell  | https://git-scm.com |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Installation & Starten
+
+### 1. Repository klonen
+
+```bash
+git clone https://github.com/DEIN-USERNAME/vst-plugin-library.git
+cd vst-plugin-library
+```
+
+### 2. Dependencies installieren
+
+```bash
+npm install
+```
+
+### 3. JSON-Server starten (Terminal 1)
+
+Der JSON-Server stellt die REST-API auf Port 3001 bereit.
+
+```bash
+npx json-server --watch db.json --port 3001
+```
+
+✅ API läuft auf: `http://localhost:3001`
+
+### 4. React App starten (Terminal 2)
+
+```bash
+npm run dev
+```
+
+✅ App läuft auf: `http://localhost:5173`
+
+---
+
+## Funktionen
+
+- 📋 Alle Plugins in einer Übersicht anzeigen
+- 🔍 Plugins nach Kategorie filtern
+- ➕ Neues Plugin erfassen (mit Validierung)
+- ✏️ Bestehendes Plugin bearbeiten
+- 🗑️ Plugin löschen (mit Bestätigung)
+- ⭐ Plugins als Favorit markieren
+
+---
+
+## Projekt-Struktur
+vst-plugin-library/
+├── src/
+│   ├── components/     # Wiederverwendbare Komponenten (Navbar)
+│   ├── pages/          # Seiten (PluginList, PluginDetail, PluginForm, NotFound)
+│   ├── services/       # API-Funktionen (api.js)
+│   ├── tests/          # Unit-Tests
+│   └── main.jsx        # Einstiegspunkt
+├── db.json             # Datenbank für json-server
+├── .env                # Umgebungsvariablen (API-URL)
+└── package.json
+
+---
+
+## Tests ausführen
+
+```bash
+npx vitest run
+```
+
+---
+
+## Technologien
+
+- [React](https://react.dev)
+- [React Router v7](https://reactrouter.com)
+- [json-server](https://github.com/typicode/json-server)
+- [Vite](https://vite.dev)
+- [Vitest](https://vitest.dev)
