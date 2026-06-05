@@ -26,19 +26,27 @@ function PluginForm() {
   const [loading, setLoading] = useState(isEdit);
 
   useEffect(() => {
-    getAllCategories().then(setCategories);
-    if (isEdit) {
-      getPluginById(id)
-        .then((data) => {
-          setForm(data);
-          setLoading(false);
-        })
-        .catch(() => {
-          setApiError("Plugin nicht gefunden (404)");
-          setLoading(false);
-        });
-    }
-  }, [id]);
+  getAllCategories()
+    .then((data) => {
+      console.log("Kategorien geladen:", data);
+      setCategories(data);
+    })
+    .catch((err) => {
+      console.error("Fehler beim Laden der Kategorien:", err);
+    });
+
+  if (isEdit) {
+    getPluginById(id)
+      .then((data) => {
+        setForm(data);
+        setLoading(false);
+      })
+      .catch(() => {
+        setApiError("Plugin nicht gefunden (404)");
+        setLoading(false);
+      });
+  }
+}, [id]);
 
   function validate() {
     const newErrors = {};

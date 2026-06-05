@@ -29,16 +29,59 @@
       "rating": 4,
       "notes": "Sehr natürlicher Reverb",
       "isFavorite": false
+    },
+    {
+      "name": "Pro-C",
+      "developer": "Fabfilter",
+      "categoryId": "6",
+      "type": "VST3",
+      "rating": "3",
+      "notes": "test 1",
+      "isFavorite": false,
+      "id": "NMrILGbV1UQ"
     }
   ],
   "categories": [
-    { "id": "1", "name": "Synth", "description": "Synthesizer Plugins" },
-    { "id": "2", "name": "Sampler", "description": "Sample-basierte Instrumente" },
-    { "id": "3", "name": "Reverb", "description": "Raumklang-Effekte" },
-    { "id": "4", "name": "Delay", "description": "Delay und Echo Effekte" },
-    { "id": "5", "name": "EQ", "description": "Equalizer Plugins" },
-    { "id": "6", "name": "Compressor", "description": "Dynamik-Kompressoren" },
-    { "id": "7", "name": "Distortion", "description": "Verzerrungs-Effekte" },
-    { "id": "8", "name": "Utility", "description": "Hilfsplugins und Tools" }
-  ]
+    {
+      "id": "1",
+      "name": "Synth",
+      "description": "Synthesizer Plugins"
+    },
+    {
+      "id": "2",
+      "name": "Sampler",
+      "description": "Sample-basierte Instrumente"
+    },
+    {
+      "id": "3",
+      "name": "Reverb",
+      "description": "Raumklang-Effekte"
+    },
+    {
+      "id": "4",
+      "name": "Delay",
+      "description": "Delay und Echo Effekte"
+    },
+    {
+      "id": "5",
+      "name": "EQ",
+      "description": "Equalizer Plugins"
+    },
+    {
+      "id": "6",
+      "name": "Compressor",
+      "description": "Dynamik-Kompressoren"
+    },
+    {
+      "id": "7",
+      "name": "Distortion",
+      "description": "Verzerrungs-Effekte"
+    },
+    {
+      "id": "8",
+      "name": "Utility",
+      "description": "Hilfsplugins und Tools"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
