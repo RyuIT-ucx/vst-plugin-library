@@ -16,16 +16,18 @@ function PluginList() {
   }, []);
 
   useEffect(() => {
-    setLoading(true);
-    const fetch = selectedCategory
-      ? getPluginsByCategory(selectedCategory)
-      : getAllPlugins();
-
-    fetch
-      .then(setPlugins)
-      .catch(() => setError("Plugins konnten nicht geladen werden"))
-      .finally(() => setLoading(false));
-  }, [selectedCategory]);
+  setLoading(true);
+  getAllPlugins()
+    .then((data) => {
+      if (selectedCategory) {
+        setPlugins(data.filter(p => p.categoryId === selectedCategory));
+      } else {
+        setPlugins(data);
+      }
+    })
+    .catch(() => setError("Plugins konnten nicht geladen werden"))
+    .finally(() => setLoading(false));
+}, [selectedCategory]);
 
   if (error) return <p style={{ color: "red" }}>{error}</p>;
   if (loading) return <p>Laden...</p>;
