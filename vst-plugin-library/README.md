@@ -24,7 +24,7 @@ Folgende Software muss installiert sein:
 ### 1. Repository klonen
 
 ```bash
-git clone https://github.com/DEIN-USERNAME/vst-plugin-library.git
+git clone https://github.com/RyuIT-ucx/vst-plugin-library
 cd vst-plugin-library
 ```
 
